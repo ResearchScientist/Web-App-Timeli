@@ -3,3 +3,8 @@ html,body,main,section,div {
   padding: 0;
 }
 
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(200,100,0);
+}
