@@ -21,6 +21,7 @@ main {
   justify-items: center;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
+  /* background-color: brown; */
 }
 
 #clock-ticks {
@@ -43,18 +44,18 @@ main {
 }
 
 #clock-ticks .main-tick {
-  width: 300px;
-  height: 4px;
+  width: 260px;
+  height: 2px;
 }
 
 #clock-ticks .mid-tick {
-  width: 280px;
-  height: 4px;
+  width: 250px;
+  height: 2px;
 }
 
 #clock-ticks .min-tick {
-  width: 260px;
-  height: 4px;
+  width: 240px;
+  height: 2px;
 }
 
 #clock-ticks div:nth-of-type(2) {transform: rotate(90deg);}
@@ -70,11 +71,32 @@ main {
 #clock-ticks div:nth-of-type(12) {transform: rotate(-75deg);}
 
 #clock-display {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   grid-row: 1/-1;
   grid-column: 1/-1;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
   background-color: rgb(200,100,0);
   z-index: 2;
+}
+
+#sun-moon-lever {
+  width: 160px;
+  height: 20px;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  transform-origin: right center;
+  transform: translateX(-80px) rotate(45deg);
+  z-index: 3;
+}
+
+#sun-moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange;
 }
