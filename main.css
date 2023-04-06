@@ -21,7 +21,6 @@ main {
   justify-items: center;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-  background-color: brown;
 }
 
 #clock-ticks {
@@ -34,6 +33,7 @@ main {
   justify-items: center;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
+  z-index: 1;
 }
 
 #clock-ticks div {
@@ -68,3 +68,13 @@ main {
 #clock-ticks div:nth-of-type(10) {transform: rotate(75deg);}
 #clock-ticks div:nth-of-type(11) {transform: rotate(-60deg);}
 #clock-ticks div:nth-of-type(12) {transform: rotate(-75deg);}
+
+#clock-display {
+  width: 250px;
+  height: 250px;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  border-radius: 50%;
+  background-color: rgb(200,100,0);
+  z-index: 2;
+}
