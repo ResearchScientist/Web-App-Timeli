@@ -21,7 +21,6 @@ main {
   justify-items: center;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-  /* background-color: brown; */
 }
 
 #clock-ticks {
@@ -84,6 +83,10 @@ main {
   z-index: 2;
 }
 
+#time-announcement,#task-announcement {
+  font-family: 'Roboto',sans-serif;
+}
+
 #time-announcement {
   font-size: 16px;
   height: 25px;
@@ -93,7 +96,7 @@ main {
 #task-announcement {
   width: 180px;
   height: 50px;
-  font-size: 21px;
+  font-size: 20px;
   text-align: center;
   /* background-color: white; */
 }
