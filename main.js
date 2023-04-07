@@ -6,8 +6,11 @@ function clock() {
   let m = now.getMinutes();
   let hh = h < 10 ? "0" + h : h;
   let mm = m < 10 ? "0" + m : m;
-  timeDisplay.innerHTML = `${hh}:${mm}`;
+  timeDisplay.textContent = `${hh}:${mm}`;
 }
 
-setInterval(clock,1000);
+// function clock() {
+//   timeDisplay.textContent = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+// }
 
+setInterval(clock,1000);
