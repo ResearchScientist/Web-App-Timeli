@@ -13,21 +13,28 @@ function clock() {
   let mratio = (sratio + m) / 60;
   let hratio = (mratio + h) / 24;
   let rotationRate = (hratio * 360) - 90;
-  timeDisplay.textContent = `${hh}:${mm}`;
+  // timeDisplay.textContent = `${hh}:${mm}`;
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
   // updateActions(h,m);
 }
 
-// function clock() {
-//   timeDisplay.textContent = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
-// }
+function clockDisplay() {
+  timeDisplay.textContent = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+}
 
 function rotateSunMoon(rotationRate) {
   sunAndmoon.style.setProperty('--rotation',rotationRate);
 }
 
+function switchSunMoon(h,m) {
+  if ( (h > 17) && (m > 30) ) {
+    sunMoon.style.setProperty('background-color','white');
+  }
+}
+
 setInterval(clock,1000);
+setInterval(clockDisplay,1000);
 
 
 // * DATABASE LOGIC * //
@@ -39,8 +46,3 @@ const actions = ['wake up','eat','read','do tech work','do research work','focus
 //   console.log(h > 16)
 // }
 
-function switchSunMoon(h,m) {
-  if ( (h > 18) && (m > 29) ) {
-    sunMoon.style.setProperty('background-color','white');
-  }
-}
