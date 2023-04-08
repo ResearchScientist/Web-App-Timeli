@@ -40,49 +40,33 @@ setInterval(clockDisplay,1000);
 
 // * DATABASE LOGIC * //
 
-const actions = ['wake up','eat','read','do tech work','do research work','focus work','eat lunch!','keep eating','be creative','gym','gym','shower','eat'];
+const actionsDB = {
+  '01':'sleep',
+  '02':'sleep',
+  '03':'sleep',
+  '04':'sleep',
+  '05':'sleep',
+  '06':'wake up',
+  '07':'breakfast',
+  '08':'read',
+  '09':'do tech work',
+  '10':'do research work',
+  '11':'do focus work',
+  '12':'eat lunch',
+  '13':'do creative work',
+  '14':'do tech work',
+  '15':'do research work',
+  '16':'do focus work',
+  '17':'gym',
+  '18':'shower',
+  '19':'dinner',
+  '20':'socialize',
+  '21':'read',
+  '22':'yoga',
+  '23':'sleep',
+  '24':'sleep'
+}
 
 function updateActions(h) {
-  if (h == 6) {
-    textDisplay.textContent = actions[0];
-  }
-  if (h == 7) {
-    textDisplay.textContent = actions[1];
-  }
-  if (h == 8) {
-    textDisplay.textContent = actions[2];
-  }
-  if (h == 9) {
-    textDisplay.textContent = actions[3];
-  }
-  if (h == 10) {
-    textDisplay.textContent = actions[4];
-  }
-  if (h == 11) {
-    textDisplay.textContent = actions[5];
-  }
-  if (h == 12) {
-    textDisplay.textContent = actions[6];
-  }
-  if (h == 13) {
-    textDisplay.textContent = actions[7];
-  }
-  if (h == 14) {
-    textDisplay.textContent = actions[8];
-  }
-  if (h == 15) {
-    textDisplay.textContent = actions[9];
-  }
-  if (h == 16) {
-    textDisplay.textContent = actions[10];
-  }
-  if (h == 17) {
-    textDisplay.textContent = actions[11];
-  }
-  if (h == 18) {
-    textDisplay.textContent = actions[12];
-  }
-  if (h == 19) {
-    textDisplay.textContent = actions[13];
-  }
+  textDisplay.textContent = actionsDB[h];
 }
