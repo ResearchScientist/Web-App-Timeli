@@ -37,7 +37,6 @@ function switchSunMoon(h,m) {
 setInterval(clock,1000);
 setInterval(clockDisplay,1000);
 
-
 // * DATABASE LOGIC * //
 
 const actionsDB = {
