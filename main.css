@@ -1,9 +1,10 @@
-html,body,header,main,section,div {
+html,body,header,main,section,div,a {
   margin: 0;
   padding: 0;
 }
 
 body {
+  width: 100vw;
   height: 100vh;
   background-color: rgb(200,100,0);
 }
@@ -11,6 +12,15 @@ body {
 header,footer {
   width: 100vw;
   height: calc(50vh - 175px);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+header a {
+  font-size: 21px;
+  text-decoration: none;
+  color: rgba(255,255,255,.75);
 }
 
 main {
@@ -124,4 +134,10 @@ main {
   border-radius: 50%;
   background-color: orange;
   transition: background-color 5s;
+}
+
+.open-task-GUI {
+  transition: all 1s;
+  animation-timing-function: ease-out;
+  transform: translateY(50px);
 }

@@ -2,6 +2,7 @@ const timeDisplay = document.getElementById('time-announcement');
 const textDisplay = document.getElementById('task-announcement');
 const sunAndmoon = document.getElementById('sun-moon-lever');
 const sunMoon = document.getElementById('sun-moon');
+const newAction = document.getElementById('open-task-GUI');
 
 function clock() {
   let now = new Date();
@@ -68,7 +69,15 @@ const actionsDB = {
 
 function updateActions(hh) {
   textDisplay.textContent = actionsDB[hh];
-}
+};
 
 // CRUD //
 
+newAction.addEventListener('click', gotClicked);
+
+function gotClicked(e) {
+  console.log(`clicked ${e}`);
+  newAction.classList.add('open-task-GUI');
+};
+
+// console.log(newAction);
