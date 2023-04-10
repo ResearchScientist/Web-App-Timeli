@@ -17,7 +17,7 @@ function clock() {
   // timeDisplay.textContent = `${hh}:${mm}`;
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
-  updateActions(h);
+  updateActions(hh);
 }
 
 function clockDisplay() {
@@ -66,6 +66,9 @@ const actionsDB = {
   '24':'sleep'
 }
 
-function updateActions(h) {
-  textDisplay.textContent = actionsDB[h];
+function updateActions(hh) {
+  textDisplay.textContent = actionsDB[hh];
 }
+
+// CRUD //
+

@@ -1,15 +1,24 @@
-html,body,main,section,div {
+html,body,header,main,section,div {
   margin: 0;
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  background-color: rgb(200,100,0);
+}
+
+header,footer {
+  width: 100vw;
+  height: calc(50vh - 175px);
+}
+
 main {
   width: 100vw;
-  height: 100vh;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(200,100,0);
 }
 
 #clock {
