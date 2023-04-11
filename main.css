@@ -167,6 +167,6 @@ header,footer {
 }
 
 .box-down {
-  transition: transform 2s;
-  transform: translateY(50px);
+  transition: transform 1.5s;
+  transform: translateY(85px);
 }

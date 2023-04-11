@@ -80,7 +80,9 @@ newAction.addEventListener('click', gotClicked);
 function gotClicked(e) {
   console.log(`clicked ${e}`);
   plusBox.classList.add('box-down');
+  console.log(plusBox.attributes);
   newAction.classList.add('open-task-GUI');
+  
 };
 
 // console.log(newAction);
