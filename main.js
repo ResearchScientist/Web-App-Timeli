@@ -5,6 +5,7 @@ const sunMoon = document.getElementById('sun-moon');
 const newAction = document.getElementById('open-task-GUI');
 const newActionSVG = document.getElementById('open-action-GUI-svg');
 const plusBox = document.getElementById('plus-box');
+const taskBox = document.getElementById('enter-task-box');
 
 function clock() {
   let now = new Date();
@@ -82,7 +83,8 @@ function gotClicked(e) {
   plusBox.classList.add('box-down');
   console.log(plusBox.attributes);
   newAction.classList.add('open-task-GUI');
-  
+  taskBox.classList.add('show-task-box');
+  // newAction.removeEventListener('click', gotClicked);
 };
 
 // console.log(newAction);
