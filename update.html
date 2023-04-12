@@ -13,21 +13,21 @@
 </head>
 <body>
   <header>
-    <svg id="open-action-GUI-svg" width="300" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="task-GUI-svg" width="300" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <a id="open-task-GUI" href="#">
-      <g id="plus-box" stroke-width="1" stroke-linecap="butt">
+        <g id="plus-box" stroke-width="1" stroke-linecap="butt">
         <!-- <animate /> -->
-        <path id="vLine" d="M50 1L50 20" pathlength="1"/>
-        <path id="hLine1" d="M50 10H40" pathlength="1"/>
-        <path id="hLine2" d="M50 10H60" pathlength="1"/>
+          <path id="vLine" d="M50 1L50 20" pathlength="1"/>
+          <path id="hLine1" d="M50 10H40" pathlength="1"/>
+          <path id="hLine2" d="M50 10H60" pathlength="1"/>
         <!-- <path id="hLine1" d="M50 50H-50" pathlength="1"/>
         <path id="hLine2" d="M50 50H150" pathlength="1"/> -->
-      </g>
-      <rect x="40" width="20" height="20" fill="rgba(250,250,250,.001)"/>
-    </a>
+        </g>
+        <rect x="40" width="20" height="20" fill="rgba(250,250,250,.001)"/>
+      </a>
     </svg>
     <section id="task-GUI" class="hide-task-GUI">
-    <form id="enter-task-box" autocomplete="off">
+    <form id="task-form" class="hide-task-form" autocomplete="off">
       <input type="text">
       <button type="submit">+</button>
     </form>
@@ -53,7 +53,7 @@
       </section>
       <section id="clock-display">
         <div id="time-announcement">00:00</div>
-        <div id="task-announcement">Eat your breakfast!</div>
+        <div id="task-announcement">current task</div>
       </section>
       <section id="sun-moon-lever">
         <div id="sun-moon"></div>

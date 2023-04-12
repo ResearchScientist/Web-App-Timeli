@@ -2,10 +2,10 @@ const timeDisplay = document.getElementById('time-announcement');
 const textDisplay = document.getElementById('task-announcement');
 const sunAndmoon = document.getElementById('sun-moon-lever');
 const sunMoon = document.getElementById('sun-moon');
-const newAction = document.getElementById('open-task-GUI');
-const newActionSVG = document.getElementById('open-action-GUI-svg');
+const taskGUIlink = document.getElementById('open-task-GUI');
+const taskGUI = document.getElementById('task-GUI');
 const plusBox = document.getElementById('plus-box');
-const taskBox = document.getElementById('enter-task-box');
+const taskForm = document.getElementById('task-form');
 
 function clock() {
   let now = new Date();
@@ -76,15 +76,16 @@ function updateActions(hh) {
 
 // INPUT BOX ANIMATION //
 
-newAction.addEventListener('click', gotClicked);
+taskGUIlink.addEventListener('click', gotClicked);
 
 function gotClicked(e) {
-  console.log(`clicked ${e}`);
+  // console.log(`clicked ${e}`);
   plusBox.classList.add('box-down');
-  console.log(plusBox.attributes);
-  newAction.classList.add('open-task-GUI');
-  taskBox.classList.add('show-task-box');
-  // newAction.removeEventListener('click', gotClicked);
+  // console.log(plusBox.attributes);
+  taskGUI.classList.add('show-task-GUI');
+  taskForm.classList.remove('hide-task-form');
+  taskForm.classList.add('show-task-form');
+  // taskGUIlink.removeEventListener('click', gotClicked);
 };
 
 // CRUD //
