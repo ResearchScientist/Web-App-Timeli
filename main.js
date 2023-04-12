@@ -74,7 +74,7 @@ function updateActions(hh) {
   textDisplay.textContent = actionsDB[hh];
 };
 
-// CRUD //
+// INPUT BOX ANIMATION //
 
 newAction.addEventListener('click', gotClicked);
 
@@ -87,4 +87,5 @@ function gotClicked(e) {
   // newAction.removeEventListener('click', gotClicked);
 };
 
-// console.log(newAction);
+// CRUD //
+
