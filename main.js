@@ -90,3 +90,12 @@ function gotClicked(e) {
 
 // CRUD //
 
+function handleSubmit(e) {
+  e.preventDefault();
+  console.log(actionsDB[19]);
+  actionsDB[19] = "eat dinners";
+  console.log(actionsDB[19]);
+  console.log(actionsDB);
+};
+
+taskForm.addEventListener('submit',handleSubmit);
