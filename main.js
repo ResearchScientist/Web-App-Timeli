@@ -18,14 +18,15 @@ function clock() {
   let mratio = (sratio + m) / 60;
   let hratio = (mratio + h) / 24;
   let rotationRate = (hratio * 360) - 90;
-  // timeDisplay.textContent = `${hh}:${mm}`;
+  clockDisplay();
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
   updateActions(hh);
 }
 
 function clockDisplay() {
-  timeDisplay.textContent = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+  // timeDisplay.textContent = `${hh}:${mm}`; // to dsiplay 24 hours
+  timeDisplay.textContent = new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}); // to display 12 hours
 }
 
 function rotateSunMoon(rotationRate) {
@@ -39,7 +40,6 @@ function switchSunMoon(h,m) {
 }
 
 setInterval(clock,1000);
-setInterval(clockDisplay,1000);
 
 // * DATABASE LOGIC * //
 

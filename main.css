@@ -1,4 +1,10 @@
-html,body,main,header,footer,section,div,a,svg,form,input {
+:root {
+  --sun: orange;
+  --fall: rgb(200,100,0);
+  --season: var(--fall);
+}
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -6,7 +12,7 @@ html,body,main,header,footer,section,div,a,svg,form,input {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(200,100,0);
+  background-color: var(--fall);
 }
 
 main {
@@ -84,7 +90,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(200,100,0);
+  background-color: var(--fall);
   z-index: 2;
 }
 
@@ -119,7 +125,7 @@ body,input {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: var(--sun);
   transition: background-color 5s;
 }
 
