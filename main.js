@@ -2,7 +2,9 @@ const timeDisplay = document.getElementById('time-announcement');
 const textDisplay = document.getElementById('task-announcement');
 const sunAndmoon = document.getElementById('sun-moon-lever');
 const sunMoon = document.getElementById('sun-moon');
-
+const hourlyButtonOpen = document.querySelector('#button-hourly-table-open');
+const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
+const hourlyTable = document.querySelector('#hourly-table');
 
 function clock() {
   let now = new Date();
@@ -89,3 +91,8 @@ const thething = document.querySelector('#thething');
 // console.log(thething);
 
 console.log(thething.getAttribute("data-tableHour"));
+
+hourlyButtonOpen.addEventListener('click', (e) => {
+  console.log('clicked open');
+  hourlyTable.style.transform = "translateY(0)";
+})
