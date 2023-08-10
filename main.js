@@ -98,4 +98,11 @@ function handleSubmit(e) {
   console.log(actionsDB);
 };
 
-taskForm.addEventListener('submit',handleSubmit);
+// taskForm.addEventListener('submit',handleSubmit);
+
+const thething = document.querySelector('#thething');
+
+// console.log(thething.dataset.data-tableHour);
+// console.log(thething);
+
+console.log(thething.getAttribute("data-tableHour"));
