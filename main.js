@@ -2,10 +2,7 @@ const timeDisplay = document.getElementById('time-announcement');
 const textDisplay = document.getElementById('task-announcement');
 const sunAndmoon = document.getElementById('sun-moon-lever');
 const sunMoon = document.getElementById('sun-moon');
-const taskGUIlink = document.getElementById('open-task-GUI');
-const taskGUI = document.getElementById('task-GUI');
-const plusBox = document.getElementById('plus-box');
-const taskForm = document.getElementById('task-form');
+
 
 function clock() {
   let now = new Date();
@@ -72,20 +69,6 @@ const actionsDB = {
 
 function updateActions(hh) {
   textDisplay.textContent = actionsDB[hh];
-};
-
-// INPUT BOX ANIMATION //
-
-taskGUIlink.addEventListener('click', gotClicked);
-
-function gotClicked(e) {
-  // console.log(`clicked ${e}`);
-  plusBox.classList.add('box-down');
-  // console.log(plusBox.attributes);
-  taskGUI.classList.add('show-task-GUI');
-  taskForm.classList.remove('hide-task-form');
-  taskForm.classList.add('show-task-form');
-  // taskGUIlink.removeEventListener('click', gotClicked);
 };
 
 // CRUD //

@@ -9,6 +9,17 @@
   padding: 0;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font: inherit;
+  appearance: none;
+  cursor: pointer;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -137,10 +148,11 @@ body {
 }
 
 header {
+  width: 100%;
+  height: 50px;
+  align-self: flex-start;
   grid-row: 1/-1;
   grid-column: 1/-1;
-  width: 320px;
-  height: calc(50vh - 175px);
   margin: 0 auto;
   display: grid;
   justify-content: center;
@@ -153,6 +165,7 @@ input,textarea {
   border: none;
   font-family: 'Roboto',sans-serif;
   font-size: 14px;
+  color: white;
   background-color: rgba(255,255,255,0);
 }
 
@@ -168,6 +181,8 @@ input::placeholder {
   grid-row: 1/-1;
   background-color:var(--fall);
   z-index: 3;
+  transform: translateY(-100vh);
+  transition: transform 1s ease-in-out;
 }
 
 .table-item-section {
@@ -195,4 +210,14 @@ input::placeholder {
   height: 22px;
   margin-left: 10px;
   border: 1px solid white;
+}
+
+#button-hourly-table-open {
+  width: 25px;
+  height: 25px;
+  margin: 20px 0 0;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  color: white;
+  background-color: rgba(250,250,250,.25);
 }
