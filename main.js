@@ -95,4 +95,9 @@ console.log(thething.getAttribute("data-tableHour"));
 hourlyButtonOpen.addEventListener('click', (e) => {
   console.log('clicked open');
   hourlyTable.style.transform = "translateY(0)";
-})
+});
+
+hourlyButtonClose.addEventListener('click', (e) => {
+  console.log('clicked open');
+  hourlyTable.style.transform = "translateY(-100vh)";
+});
