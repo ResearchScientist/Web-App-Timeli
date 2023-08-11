@@ -5,6 +5,11 @@ const sunMoon = document.getElementById('sun-moon');
 const hourlyButtonOpen = document.querySelector('#button-hourly-table-open');
 const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
 const hourlyTable = document.querySelector('#hourly-table');
+const dt6 = document.querySelector('#dt6');
+const tableForm = document.querySelector('#hourly-table-form');
+const tableHour = document.querySelector('[data-tableHour]');
+// const val = document.querySelector('input').value;
+
 
 function clock() {
   let now = new Date();
@@ -40,7 +45,54 @@ function switchSunMoon(h,m) {
 
 setInterval(clock,1000);
 
+// * TOGGLE HOURLY TABLE * //
+
+hourlyButtonOpen.addEventListener('click', (e) => {
+  hourlyTable.style.transform = "translateY(0)";
+});
+
+hourlyButtonClose.addEventListener('click', (e) => {
+  hourlyTable.style.transform = "translateY(-100vh)";
+});
+
 // * DATABASE LOGIC * //
+
+let hourlyItems = [ , , , , , , , , , , , , , , , , , , , , , , , , ];
+
+console.log(hourlyItems.length);
+console.log(`initial value of 1 ${hourlyItems[1]}`);
+
+tableForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  x = dt6.value;
+  console.log(x);
+  // hourlyItems[1] = tableHour.value;
+  // console.log(`the array ${hourlyItems}`);
+  // let itemHere = document.querySelector('#item-here');
+  // itemHere.innerText = hourlyItems[1];
+  updateArray();
+  // console.log(`initial value of 1 ${hourlyItems[1]}`);
+  // return hourlyItems;
+})
+
+function updateArray () {
+  console.log(dt6.value);
+  // console.log(`updated array is ${hourlyItems}`);
+  // console.log(`slot 1 says ${hourlyItems[1]}`);
+}
+
+function showMe () {
+  console.log(`after interval ${hourlyItems}`);
+}
+
+// setInterval(updateArray,1000);
+
+
+
+// hourlyItems[1] = "something";
+
+// let itemHere = document.querySelector('#item-here');
+// itemHere.innerText = hourlyItems[1];
 
 const actionsDB = {
   '01':'sleep',
@@ -75,29 +127,13 @@ function updateActions(hh) {
 
 // CRUD //
 
-function handleSubmit(e) {
-  e.preventDefault();
-  console.log(actionsDB[19]);
-  actionsDB[19] = "eat dinners";
-  console.log(actionsDB[19]);
-  console.log(actionsDB);
-};
+// function handleSubmit(e) {
+//   e.preventDefault();
+//   console.log(actionsDB[19]);
+//   actionsDB[19] = "eat dinners";
+//   console.log(actionsDB[19]);
+//   console.log(actionsDB);
+// };
 
-// taskForm.addEventListener('submit',handleSubmit);
 
-const thething = document.querySelector('#thething');
-
-// console.log(thething.dataset.data-tableHour);
-// console.log(thething);
-
-console.log(thething.getAttribute("data-tableHour"));
-
-hourlyButtonOpen.addEventListener('click', (e) => {
-  console.log('clicked open');
-  hourlyTable.style.transform = "translateY(0)";
-});
-
-hourlyButtonClose.addEventListener('click', (e) => {
-  console.log('clicked open');
-  hourlyTable.style.transform = "translateY(-100vh)";
-});
+console.log(dt6.getAttribute("data-tableHour"));

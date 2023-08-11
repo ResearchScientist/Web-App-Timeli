@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+  <title>Timeli</title>
+</head>
+<body>
+  <header>
+    <button id="button-hourly-table-open">+</button>
+  </header>
+  <main>
+    <section id="clock">
+      <section id="clock-ticks">
+        <div class="main-tick"></div>
+        <div class="main-tick"></div>
+        <div class="mid-tick"></div>
+        <div class="mid-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+        <div class="min-tick"></div>
+      </section>
+      <section id="clock-display">
+        <div id="time-announcement">00:00</div>
+        <div id="task-announcement">current task</div>
+      </section>
+      <section id="sun-moon-lever">
+        <div id="sun-moon"></div>
+      </section>
+      </section>
+    </section>
+  </main>
+  <aside id="hourly-table">
+    <section id="hourly-table-button-section"><button id="button-hourly-table-close">x</button></section>
+    <section class="table-item-section"><div class="table-hour">06:00</div><form action="" data-tableForm><input id="dt6" type="text" placeholder="my new task" data-tableHour="06"></form></section>
+    <section class="table-item-section"><div class="table-hour">07:00</div><form action="" data-tableForm><input id="dt7" type="text" placeholder="my new task" data-tableHour="07"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="08"><div class="table-hour">08:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="09"><div class="table-hour">09:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="10"><div class="table-hour">10:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="11"><div class="table-hour">11:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="12"><div class="table-hour">12:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="13"><div class="table-hour">01:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="14"><div class="table-hour">02:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="15"><div class="table-hour">03:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="16"><div class="table-hour">04:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="17"><div class="table-hour">05:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="18"><div class="table-hour">06:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="19"><div class="table-hour">07:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="20"><div class="table-hour">08:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="21"><div class="table-hour">09:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="22"><div class="table-hour">10:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="23"><div class="table-hour">11:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <section class="table-item-section" id="dt" data-tableHour="24"><div class="table-hour">12:00</div><form action=""><input type="text" placeholder="my new task"></form></section>
+    <div id="item-here">item appears here</div>
+  </aside>
+</body>
+</html>
