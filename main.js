@@ -5,11 +5,8 @@ const sunMoon = document.getElementById('sun-moon');
 const hourlyButtonOpen = document.querySelector('#button-hourly-table-open');
 const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
 const hourlyTable = document.querySelector('#hourly-table');
-const dt6 = document.querySelector('#dt6');
-const tableForm = document.querySelector('#hourly-table-form');
-const tableHour = document.querySelector('[data-tableHour]');
-// const val = document.querySelector('input').value;
-
+// const dt6 = document.querySelector('#dt6');
+const tableFormSection = document.querySelector('#hourly-table-form-section');
 
 function clock() {
   let now = new Date();
@@ -59,26 +56,31 @@ hourlyButtonClose.addEventListener('click', (e) => {
 
 let hourlyItems = [ , , , , , , , , , , , , , , , , , , , , , , , , ];
 
-console.log(hourlyItems.length);
-console.log(`initial value of 1 ${hourlyItems[1]}`);
+// console.log(hourlyItems.length);
+// console.log(`initial value of 1 ${hourlyItems[1]}`);
 
-tableForm.addEventListener('submit', (e) => {
+tableFormSection.addEventListener('submit', (e) => {
   e.preventDefault();
-  x = dt6.value;
-  console.log(x);
+  let formID = e.target.id;
+  let inputID = formID.replace('df','dt');
+  let inputHour = formID.replace('df','');
+  let inputElement = document.querySelector(`#${inputID}`);
+  let inputValue = inputElement.value;
+  updateItems(inputHour,inputValue);
   // hourlyItems[1] = tableHour.value;
   // console.log(`the array ${hourlyItems}`);
   // let itemHere = document.querySelector('#item-here');
   // itemHere.innerText = hourlyItems[1];
-  updateArray();
+  // updateArray();
   // console.log(`initial value of 1 ${hourlyItems[1]}`);
   // return hourlyItems;
 })
 
-function updateArray () {
-  console.log(dt6.value);
-  // console.log(`updated array is ${hourlyItems}`);
-  // console.log(`slot 1 says ${hourlyItems[1]}`);
+function updateItems(inputHour,inputValue) {
+  console.log(inputHour);
+  console.log(inputValue);
+  hourlyItems[inputHour] = inputValue;
+  console.log(hourlyItems);
 }
 
 function showMe () {
@@ -136,4 +138,4 @@ function updateActions(hh) {
 // };
 
 
-console.log(dt6.getAttribute("data-tableHour"));
+// console.log(dt6.getAttribute("data-tableHour"));
