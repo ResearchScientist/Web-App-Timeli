@@ -66,43 +66,55 @@ tableFormSection.addEventListener('submit', (e) => {
 })
 
 function updateItems(inputHour,inputValue) {
-  console.log(inputHour);
-  console.log(inputValue);
   hourlyItems[inputHour] = inputValue;
+  saveLocStoArray();
   console.log(hourlyItems);
-  return hourlyItems;
 }
 
-const actionsDB = {
-  '01':'sleep',
-  '02':'sleep',
-  '03':'sleep',
-  '04':'sleep',
-  '05':'sleep',
-  '06':'wake up',
-  '07':'breakfast',
-  '08':'read',
-  '09':'do tech work',
-  '10':'do research work',
-  '11':'do focus work',
-  '12':'eat lunch',
-  '13':'do creative work',
-  '14':'do tech work',
-  '15':'do research work',
-  '16':'do focus work',
-  '17':'gym',
-  '18':'shower',
-  '19':'dinner',
-  '20':'socialize',
-  '21':'read',
-  '22':'yoga',
-  '23':'sleep',
-  '24':'sleep'
-}
+// const actionsDB = {
+//   '01':'sleep',
+//   '02':'sleep',
+//   '03':'sleep',
+//   '04':'sleep',
+//   '05':'sleep',
+//   '06':'wake up',
+//   '07':'breakfast',
+//   '08':'read',
+//   '09':'do tech work',
+//   '10':'do research work',
+//   '11':'do focus work',
+//   '12':'eat lunch',
+//   '13':'do creative work',
+//   '14':'do tech work',
+//   '15':'do research work',
+//   '16':'do focus work',
+//   '17':'gym',
+//   '18':'shower',
+//   '19':'dinner',
+//   '20':'socialize',
+//   '21':'read',
+//   '22':'yoga',
+//   '23':'sleep',
+//   '24':'sleep'
+// }
 
 function updateActions(h) {
   // textDisplay.textContent = actionsDB[hh];
   textDisplay.textContent = hourlyItems[h];
 };
 
-// CRUD //
+// PERSIST DATA 
+
+function saveLocStoArray () {
+  let jsonHourlyItems = JSON.stringify(hourlyItems);
+  localStorage.setItem('array',jsonHourlyItems);
+}
+
+function retrieveLocStoArray () {
+  let retrievedString = localStorage.getItem('array');
+  let retrievedArray = JSON.parse(retrievedString);
+  hourlyItems = retrievedArray;
+  updateItems();
+}
+
+retrieveLocStoArray();
