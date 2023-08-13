@@ -5,7 +5,6 @@ const sunMoon = document.getElementById('sun-moon');
 const hourlyButtonOpen = document.querySelector('#button-hourly-table-open');
 const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
 const hourlyTable = document.querySelector('#hourly-table');
-// const dt6 = document.querySelector('#dt6');
 const tableFormSection = document.querySelector('#hourly-table-form-section');
 
 function clock() {
@@ -22,7 +21,7 @@ function clock() {
   clockDisplay();
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
-  updateActions(hh);
+  updateActions(h);
 }
 
 function clockDisplay() {
@@ -56,9 +55,6 @@ hourlyButtonClose.addEventListener('click', (e) => {
 
 let hourlyItems = [ , , , , , , , , , , , , , , , , , , , , , , , , ];
 
-// console.log(hourlyItems.length);
-// console.log(`initial value of 1 ${hourlyItems[1]}`);
-
 tableFormSection.addEventListener('submit', (e) => {
   e.preventDefault();
   let formID = e.target.id;
@@ -67,13 +63,6 @@ tableFormSection.addEventListener('submit', (e) => {
   let inputElement = document.querySelector(`#${inputID}`);
   let inputValue = inputElement.value;
   updateItems(inputHour,inputValue);
-  // hourlyItems[1] = tableHour.value;
-  // console.log(`the array ${hourlyItems}`);
-  // let itemHere = document.querySelector('#item-here');
-  // itemHere.innerText = hourlyItems[1];
-  // updateArray();
-  // console.log(`initial value of 1 ${hourlyItems[1]}`);
-  // return hourlyItems;
 })
 
 function updateItems(inputHour,inputValue) {
@@ -81,20 +70,8 @@ function updateItems(inputHour,inputValue) {
   console.log(inputValue);
   hourlyItems[inputHour] = inputValue;
   console.log(hourlyItems);
+  return hourlyItems;
 }
-
-function showMe () {
-  console.log(`after interval ${hourlyItems}`);
-}
-
-// setInterval(updateArray,1000);
-
-
-
-// hourlyItems[1] = "something";
-
-// let itemHere = document.querySelector('#item-here');
-// itemHere.innerText = hourlyItems[1];
 
 const actionsDB = {
   '01':'sleep',
@@ -123,19 +100,9 @@ const actionsDB = {
   '24':'sleep'
 }
 
-function updateActions(hh) {
-  textDisplay.textContent = actionsDB[hh];
+function updateActions(h) {
+  // textDisplay.textContent = actionsDB[hh];
+  textDisplay.textContent = hourlyItems[h];
 };
 
 // CRUD //
-
-// function handleSubmit(e) {
-//   e.preventDefault();
-//   console.log(actionsDB[19]);
-//   actionsDB[19] = "eat dinners";
-//   console.log(actionsDB[19]);
-//   console.log(actionsDB);
-// };
-
-
-// console.log(dt6.getAttribute("data-tableHour"));
