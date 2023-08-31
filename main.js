@@ -21,7 +21,7 @@ function clock() {
   clockDisplay();
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
-  // displayActions(h);
+  displayActions(h);
 }
 
 function clockDisplay() {
@@ -53,8 +53,6 @@ hourlyButtonClose.addEventListener('click', (e) => {
 
 // * DATABASE LOGIC * //
 
-// let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
-
 tableFormSection.addEventListener('submit', (e) => {
   e.preventDefault();
   let formID = e.target.id;
@@ -65,34 +63,50 @@ tableFormSection.addEventListener('submit', (e) => {
   updateItems(inputHour,inputValue);
 })
 
+let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
+console.log(hourlyItems);
+
 function updateItems(inputHour,inputValue) {
-  let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
-  console.log(`hour = ${inputHour} value = ${inputValue}`);
+  // console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
-  console.log(hourlyItems);
-  saveLocStoArray();
+  // saveLocStoArray();
+  showHourlyItems();
 }
 
-// function displayActions(h) {
-//   textDisplay.textContent = hourlyItems[h];
-// };
+function showHourlyItems () {
+  console.log(hourlyItems);
+}
+
+
+function displayActions(h) {
+  
+  if (hourlyItems[h].length === 0) {
+    textDisplay.textContent = 'nothing to do';
+  }
+  if (hourlyItems[h].trim().length === 0) {
+    textDisplay.textContent = 'nothing to do';
+  }
+  else {
+    textDisplay.textContent = hourlyItems[h];
+  }
+}
 
 // PERSIST DATA 
 
-function saveLocStoArray () {
-  let jsonHourlyItems = JSON.stringify(hourlyItems);
-  localStorage.setItem('array',jsonHourlyItems);
-}
+// function saveLocStoArray () {
+//   let jsonHourlyItems = JSON.stringify(hourlyItems);
+//   localStorage.setItem('array',jsonHourlyItems);
+// }
 
-function retrieveLocStoArray () {
-  let retrievedString = localStorage.getItem('array');
-  let retrievedArray = JSON.parse(retrievedString);
-  hourlyItems = retrievedArray;
-  repopulateInputs();
-}
+// function retrieveLocStoArray () {
+//   let retrievedString = localStorage.getItem('array');
+//   let retrievedArray = JSON.parse(retrievedString);
+//   hourlyItems = retrievedArray;
+//   repopulateInputs();
+// }
 
-retrieveLocStoArray();
+// retrieveLocStoArray();
 
-function repopulateInputs() {
-  console.log('now repopulate');
-}
+// function repopulateInputs() {
+//   console.log('now repopulate');
+// }
