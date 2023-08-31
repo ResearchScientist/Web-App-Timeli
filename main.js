@@ -70,20 +70,12 @@ function updateItems(inputHour,inputValue) {
   // console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
   // saveLocStoArray();
-  showHourlyItems();
-}
-
-function showHourlyItems () {
   console.log(hourlyItems);
 }
 
-
 function displayActions(h) {
   
-  if (hourlyItems[h].length === 0) {
-    textDisplay.textContent = 'nothing to do';
-  }
-  if (hourlyItems[h].trim().length === 0) {
+  if (hourlyItems[h].length === 0 || hourlyItems[h].trim().length === 0) {
     textDisplay.textContent = 'nothing to do';
   }
   else {
