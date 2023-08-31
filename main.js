@@ -21,7 +21,7 @@ function clock() {
   clockDisplay();
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
-  displayActions(h);
+  // displayActions(h);
 }
 
 function clockDisplay() {
@@ -53,7 +53,7 @@ hourlyButtonClose.addEventListener('click', (e) => {
 
 // * DATABASE LOGIC * //
 
-let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
+// let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
 
 tableFormSection.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -66,13 +66,16 @@ tableFormSection.addEventListener('submit', (e) => {
 })
 
 function updateItems(inputHour,inputValue) {
+  let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
+  console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
+  console.log(hourlyItems);
   saveLocStoArray();
 }
 
-function displayActions(h) {
-  textDisplay.textContent = hourlyItems[h];
-};
+// function displayActions(h) {
+//   textDisplay.textContent = hourlyItems[h];
+// };
 
 // PERSIST DATA 
 
