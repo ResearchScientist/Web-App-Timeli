@@ -64,13 +64,13 @@ tableFormSection.addEventListener('submit', (e) => {
 })
 
 let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
-console.log(hourlyItems);
+// console.log(hourlyItems);
 
 function updateItems(inputHour,inputValue) {
   // console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
-  // saveLocStoArray();
-  console.log(hourlyItems);
+  saveLocStoArray();
+  // console.log(hourlyItems);
 }
 
 function displayActions(h) {
@@ -85,10 +85,11 @@ function displayActions(h) {
 
 // PERSIST DATA 
 
-// function saveLocStoArray () {
-//   let jsonHourlyItems = JSON.stringify(hourlyItems);
-//   localStorage.setItem('array',jsonHourlyItems);
-// }
+function saveLocStoArray () {
+  let jsonHourlyItems = JSON.stringify(hourlyItems);
+  localStorage.setItem('array',jsonHourlyItems);
+  console.log(jsonHourlyItems);
+}
 
 // function retrieveLocStoArray () {
 //   let retrievedString = localStorage.getItem('array');
