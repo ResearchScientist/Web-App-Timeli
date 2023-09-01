@@ -63,12 +63,11 @@ tableFormSection.addEventListener('submit', (e) => {
   updateItems(inputHour,inputValue);
 })
 
-let hourlyItems = ["","","","","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
+let hourlyItems = ["","","","","","","","","","","","","","","","","","","","","","","",""];
 
 function updateItems(inputHour,inputValue) {
   // console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
-  console.log('after one item added ',hourlyItems);
   saveLocStoArray();
 }
 
