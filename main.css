@@ -185,6 +185,12 @@ input::placeholder {
   transition: transform 1s ease-in-out;
 }
 
+/* #hourly-table-form-section {
+  height: 770px;
+  margin: 200px 0 0;
+  background-color: grey;
+} */
+
 #hourly-table-form {
   margin: 10px 0 0;
 }
@@ -221,4 +227,8 @@ input::placeholder {
   grid-row: 1/-1;
   color: white;
   background-color: rgba(250,250,250,.25);
+}
+
+#df1,#df2,#df3,#df4,#df5 {
+  display: none;
 }

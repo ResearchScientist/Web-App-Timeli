@@ -63,17 +63,16 @@ tableFormSection.addEventListener('submit', (e) => {
   updateItems(inputHour,inputValue);
 })
 
-let hourlyItems = ["nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
-// console.log(hourlyItems);
+let hourlyItems = ["","","","","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do","nothing to do"];
 
 function updateItems(inputHour,inputValue) {
   // console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
+  console.log('after one item added ',hourlyItems);
   saveLocStoArray();
 }
 
 function displayActions(h) {
-  
   if (hourlyItems[h].length === 0 || hourlyItems[h].trim().length === 0) {
     textDisplay.textContent = 'nothing to do';
   }
@@ -87,18 +86,20 @@ function displayActions(h) {
 function saveLocStoArray () {
   let jsonHourlyItems = JSON.stringify(hourlyItems);
   localStorage.setItem('array',jsonHourlyItems);
-  console.log(jsonHourlyItems);
 }
 
-// function retrieveLocStoArray () {
-//   let retrievedString = localStorage.getItem('array');
-//   let retrievedArray = JSON.parse(retrievedString);
-//   hourlyItems = retrievedArray;
-//   repopulateInputs();
-// }
+function retrieveLocStoArray () {
+  let retrievedString = localStorage.getItem('array');
+  let retrievedArray = JSON.parse(retrievedString);
+  hourlyItems = retrievedArray;
+  repopulateInputs(retrievedArray);
+}
 
-// retrieveLocStoArray();
+function repopulateInputs(retrievedArray) {
+  for (let i = 0; i < 24; i++) {
+    let repopulateElement = document.querySelector(`#dt${i}`);
+    repopulateElement.value = retrievedArray[i];
+  }
+}
 
-// function repopulateInputs() {
-//   console.log('now repopulate');
-// }
+retrieveLocStoArray();
