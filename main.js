@@ -70,7 +70,6 @@ function updateItems(inputHour,inputValue) {
   // console.log(`hour = ${inputHour} value = ${inputValue}`);
   hourlyItems[inputHour] = inputValue;
   saveLocStoArray();
-  // console.log(hourlyItems);
 }
 
 function displayActions(h) {
