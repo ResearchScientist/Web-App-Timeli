@@ -185,12 +185,6 @@ input::placeholder {
   transition: transform 1s ease-in-out;
 }
 
-/* #hourly-table-form-section {
-  height: 770px;
-  margin: 200px 0 0;
-  background-color: grey;
-} */
-
 #hourly-table-form {
   margin: 10px 0 0;
 }
@@ -231,4 +225,52 @@ input::placeholder {
 
 #df1,#df2,#df3,#df4,#df5 {
   display: none;
+}
+
+#leaf-1 {
+  position: absolute;
+  top: 5%;
+  left: 10%
+}
+
+#leaf-2 {
+  position: absolute;
+  top: 15%;
+  right: 15%
+}
+
+#leaf-3 {
+  position: absolute;
+  bottom: 25%;
+  right: 5%
+}
+
+#leaf-4 {
+  position: absolute;
+  bottom: 20%;
+  right: 10%
+}
+
+#leaf-5 {
+  position: absolute;
+  bottom: 14%;
+  right: 5%
+}
+
+#mtn-1 {
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+}
+
+#mtn-2 {
+  position: absolute;
+  bottom: 2%;
+  left: 12%;
+}
+
+#mtn-3 {
+  position: absolute;
+  bottom: 0%;
+  left: 2%;
 }
