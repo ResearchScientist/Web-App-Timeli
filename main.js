@@ -33,9 +33,14 @@ function rotateSunMoon(rotationRate) {
   sunAndmoon.style.setProperty('--rotation',rotationRate);
 }
 
-function switchSunMoon(h,m) {
-  if ( (h > 17) && (m > 30) ) {
-    sunMoon.style.setProperty('background-color','white');
+function switchSunMoon(hh) {  
+  if ( hh > 18 ) {
+    sunMoon.style.setProperty('background-color','red');
+  }
+  else {
+    if (hh > 6) {
+      sunMoon.style.setProperty('background-color','white');
+    }
   }
 }
 
