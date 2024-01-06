@@ -7,6 +7,8 @@ const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
 const hourlyTable = document.querySelector('#hourly-table');
 const tableFormSection = document.querySelector('#hourly-table-form-section');
 
+// * CLOCK * //
+
 function clock() {
   let now = new Date();
   let s = now.getSeconds();
@@ -22,6 +24,7 @@ function clock() {
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
   displayActions(h);
+  changeSeason(now)
 }
 
 function clockDisplay() {
@@ -45,6 +48,30 @@ function switchSunMoon(hh) {
 }
 
 setInterval(clock,1000);
+
+// * SEASONS * //
+
+winter = [0,1,2];
+spring = [3,4,5];
+summer = [6,7,8];
+fall = [9,10,11];
+
+function changeSeason(now) {
+  month = now.getMonth();
+  console.log(month)
+  if (winter.includes(month)) {
+    console.log('winter');
+  }
+  else if (spring.includes(month)) {
+    console.log('spring');
+  }
+  else if (summer.includes(month)) {
+    console.log('summer');
+  }
+  else {
+    console.log('fall');
+  }
+}
 
 // * TOGGLE HOURLY TABLE * //
 
