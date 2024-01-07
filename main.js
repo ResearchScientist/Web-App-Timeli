@@ -51,26 +51,29 @@ setInterval(clock,1000);
 
 // * SEASONS * //
 
-winter = [0,1,2];
-spring = [3,4,5];
-summer = [6,7,8];
-fall = [9,10,11];
+const winter = [0,1,2];
+const spring = [3,4,5];
+const summer = [6,7,8];
+const fall = [9,10,11];
 
 function changeSeason(now) {
-  month = now.getMonth();
-  console.log(month)
+  let season = 'what season is this';
+  let month = now.getMonth();
+  // let month = 10;
+  // console.log(month)
   if (winter.includes(month)) {
-    console.log('winter');
+    season = 'winter';
   }
   else if (spring.includes(month)) {
-    console.log('spring');
+    season = 'spring';
   }
   else if (summer.includes(month)) {
-    console.log('summer');
+    season = 'summer';
   }
   else {
-    console.log('fall');
+    season = 'fall';
   }
+  console.log(season)
 }
 
 // * TOGGLE HOURLY TABLE * //
