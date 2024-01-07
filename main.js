@@ -6,6 +6,8 @@ const hourlyButtonOpen = document.querySelector('#button-hourly-table-open');
 const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
 const hourlyTable = document.querySelector('#hourly-table');
 const tableFormSection = document.querySelector('#hourly-table-form-section');
+const body = document.querySelector('body');
+const clockBG = document.querySelector('#clock-display');
 
 // * CLOCK * //
 
@@ -73,7 +75,16 @@ function changeSeason(now) {
   else {
     season = 'fall';
   }
-  console.log(season)
+  console.log(season);
+  styleSeason(season);
+}
+
+function styleSeason(season) {
+  if (season == 'winter') {
+    body.style.backgroundColor = "var(--winter)";
+    clockBG.style.backgroundColor = "var(--winter)";
+    hourlyTable.style.backgroundColor = "var(--winter)";
+  }
 }
 
 // * TOGGLE HOURLY TABLE * //
