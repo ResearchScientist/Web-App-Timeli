@@ -1,7 +1,13 @@
 :root {
   --sun: orange;
-  --winter: rgb(100,100,200);
-  --fall: rgb(200,100,0);
+  --spring-day: rgb(197,204,153);
+  --spring-night: rgb(110,119,59);
+  --summer-day: rgb(103,157,200);
+  --summer-night: rgb(68,129,187);
+  --fall-day: rgb(200,100,0);
+  --fall-night: rgb(153,76,0);
+  --winter-day: rgb(160,195,223);
+  --winter-night: rgb(51,108,153);
   --season: var(--fall);
   --bgColour: var(--season);
 }

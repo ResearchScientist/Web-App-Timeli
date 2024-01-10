@@ -26,7 +26,7 @@ function clock() {
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
   displayActions(h);
-  changeSeason(now)
+  changeSeason(now,h)
 }
 
 function clockDisplay() {
@@ -58,32 +58,79 @@ const spring = [3,4,5];
 const summer = [6,7,8];
 const fall = [9,10,11];
 
-function changeSeason(now) {
+function changeSeason(now,h) {
   let season = 'what season is this';
   let month = now.getMonth();
-  // let month = 10;
-  // console.log(month)
-  if (winter.includes(month)) {
-    season = 'winter';
+  if (winter.includes(month) && h > 5) {
+    season = 'winter-day';
   }
-  else if (spring.includes(month)) {
-    season = 'spring';
+  else if (spring.includes(month) && h > 17) {
+    season = 'spring-night';
   }
-  else if (summer.includes(month)) {
-    season = 'summer';
+  else if (spring.includes(month) && h > 5) {
+    season = 'spring-day';
   }
-  else {
-    season = 'fall';
+  else if (summer.includes(month) && h > 17) {
+    season = 'summer-night';
+  }
+  else if (summer.includes(month) && h > 5) {
+    season = 'summer-day';
+  }
+  else if (fall.includes(month) && h > 17) {
+    season = 'fall-night';
+  }
+  else if (fall.includes(month) && h > 5) {
+    season = 'fall-day';
+  }
+  else if (winter.includes(month) && h > 17) {
+    season = 'winter-night';
+  } else {
+    season = 'winter-day';
   }
   console.log(season);
   styleSeason(season);
 }
 
 function styleSeason(season) {
-  if (season == 'winter') {
-    body.style.backgroundColor = "var(--winter)";
-    clockBG.style.backgroundColor = "var(--winter)";
-    hourlyTable.style.backgroundColor = "var(--winter)";
+  if (season == 'spring-day') {
+    body.style.backgroundColor = "var(--spring-day)";
+    clockBG.style.backgroundColor = "var(--spring-day)";
+    hourlyTable.style.backgroundColor = "var(--spring-day)";
+  }
+  else if (season == 'spring-night') {
+    body.style.backgroundColor = "var(--spring-night)";
+    clockBG.style.backgroundColor = "var(--spring-night)";
+    hourlyTable.style.backgroundColor = "var(--spring-night)";
+  }
+  else if (season == 'summer-day') {
+    body.style.backgroundColor = "var(--summer-day)";
+    clockBG.style.backgroundColor = "var(--summer-day)";
+    hourlyTable.style.backgroundColor = "var(--summer-day)";
+  }
+  else if (season == 'summer-night') {
+    body.style.backgroundColor = "var(--summer-night)";
+    clockBG.style.backgroundColor = "var(--summer-night)";
+    hourlyTable.style.backgroundColor = "var(--summer-night)";
+  }
+  else if (season == 'fall-day') {
+    body.style.backgroundColor = "var(--fall-day)";
+    clockBG.style.backgroundColor = "var(--fall-day)";
+    hourlyTable.style.backgroundColor = "var(--fall-day)";
+  }
+  else if (season == 'fall-night') {
+    body.style.backgroundColor = "var(--fall-night)";
+    clockBG.style.backgroundColor = "var(--fall-night)";
+    hourlyTable.style.backgroundColor = "var(--fall-night)";
+  }
+  else if (season == 'winter-day') {
+    body.style.backgroundColor = "var(--winter-day)";
+    clockBG.style.backgroundColor = "var(--winter-day)";
+    hourlyTable.style.backgroundColor = "var(--winter-day)";
+  }
+  else {
+    body.style.backgroundColor = "var(--winter-night)";
+    clockBG.style.backgroundColor = "var(--winter-night)";
+    hourlyTable.style.backgroundColor = "var(--winter-night)";
   }
 }
 
