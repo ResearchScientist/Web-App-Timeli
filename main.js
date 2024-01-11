@@ -8,6 +8,16 @@ const hourlyTable = document.querySelector('#hourly-table');
 const tableFormSection = document.querySelector('#hourly-table-form-section');
 const body = document.querySelector('body');
 const clockBG = document.querySelector('#clock-display');
+const mnt1 = document.querySelector('#mtn-1');
+const mnt2 = document.querySelector('#mtn-2');
+const mnt3 = document.querySelector('#mtn-3');
+const lf1 = document.querySelector('#leaf-1');
+const lf2 = document.querySelector('#leaf-2');
+const lf3 = document.querySelector('#leaf-3');
+const lf4 = document.querySelector('#leaf-4');
+const lf5 = document.querySelector('#leaf-5');
+const sf1 = document.querySelector('#snowflake-1');
+const sf2 = document.querySelector('#snowflake-2');
 
 // * CLOCK * //
 
@@ -116,21 +126,37 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--fall-day)";
     clockBG.style.backgroundColor = "var(--fall-day)";
     hourlyTable.style.backgroundColor = "var(--fall-day)";
+    lf1.style.opacity = "1";
+    lf2.style.opacity = "1";
+    lf3.style.opacity = "1";
+    lf4.style.opacity = "1";
+    lf5.style.opacity = "1";
   }
   else if (season == 'fall-night') {
     body.style.backgroundColor = "var(--fall-night)";
     clockBG.style.backgroundColor = "var(--fall-night)";
     hourlyTable.style.backgroundColor = "var(--fall-night)";
+    
   }
   else if (season == 'winter-day') {
     body.style.backgroundColor = "var(--winter-day)";
     clockBG.style.backgroundColor = "var(--winter-day)";
     hourlyTable.style.backgroundColor = "var(--winter-day)";
+    mnt1.style.fill = "rgb(61,121,169)";
+    mnt2.style.fill = "rgb(135,178,212)";
+    mnt3.style.fill = "rgb(103,157,200)";
+    sf1.style.opacity = "1";
+    sf2.style.opacity = "1";
   }
   else {
     body.style.backgroundColor = "var(--winter-night)";
     clockBG.style.backgroundColor = "var(--winter-night)";
     hourlyTable.style.backgroundColor = "var(--winter-night)";
+    mnt1.style.fill = "rgb(61,121,169)";
+    mnt2.style.fill = "rgb(135,178,212)";
+    mnt3.style.fill = "rgb(103,157,200)";
+    sf1.style.opacity = "1";
+    sf2.style.opacity = "1";
   }
 }
 

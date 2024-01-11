@@ -238,37 +238,57 @@ input::placeholder {
 #leaf-1 {
   position: absolute;
   top: 5%;
-  left: 10%
+  left: 10%;
+  opacity: 0;
 }
 
 #leaf-2 {
   position: absolute;
   top: 15%;
-  right: 15%
+  right: 15%;
+  opacity: 0;
 }
 
 #leaf-3 {
   position: absolute;
   bottom: 25%;
-  right: 5%
+  right: 5%;
+  opacity: 0;
 }
 
 #leaf-4 {
   position: absolute;
   bottom: 20%;
-  right: 10%
+  right: 10%;
+  opacity: 0;
 }
 
 #leaf-5 {
   position: absolute;
   bottom: 14%;
-  right: 5%
+  right: 5%;
+  opacity: 0;
+}
+
+#snowflake-1 {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  opacity: 0;
+}
+
+#snowflake-2 {
+  position: absolute;
+  bottom: 18%;
+  right: 22%;
+  opacity: 0;
 }
 
 #mtn-1 {
   position: absolute;
   bottom: 10%;
   left: 0%;
+  fill: #804000;
 }
 
 #mtn-2 {
