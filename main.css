@@ -337,3 +337,21 @@ input::placeholder {
   bottom: 0%;
   left: 2%;
 }
+
+#mtn-w-1 {
+  position: absolute;
+  bottom: 4.5%;
+  left: 0%;
+}
+
+#mtn-w-2 {
+  position: absolute;
+  bottom: 0%;
+  left: 11.7%;
+}
+
+#mtn-w-3 {
+  position: absolute;
+  bottom: 0%;
+  left: 1.6%;
+}
