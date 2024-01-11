@@ -11,6 +11,9 @@ const clockBG = document.querySelector('#clock-display');
 const mnt1 = document.querySelector('#mtn-1');
 const mnt2 = document.querySelector('#mtn-2');
 const mnt3 = document.querySelector('#mtn-3');
+const mntw1 = document.querySelector('#mtn-w-1');
+const mntw2 = document.querySelector('#mtn-w-2');
+const mntw3 = document.querySelector('#mtn-w-3');
 const lf1 = document.querySelector('#leaf-1');
 const lf2 = document.querySelector('#leaf-2');
 const lf3 = document.querySelector('#leaf-3');
@@ -18,6 +21,11 @@ const lf4 = document.querySelector('#leaf-4');
 const lf5 = document.querySelector('#leaf-5');
 const sf1 = document.querySelector('#snowflake-1');
 const sf2 = document.querySelector('#snowflake-2');
+const sb1 = document.querySelector('#snowball-1');
+const sb2 = document.querySelector('#snowball-2');
+const sb3 = document.querySelector('#snowball-3');
+const sb4 = document.querySelector('#snowball-4');
+const sb5 = document.querySelector('#snowball-5');
 
 // * CLOCK * //
 
@@ -36,7 +44,7 @@ function clock() {
   rotateSunMoon(rotationRate);
   switchSunMoon(h,m);
   displayActions(h);
-  changeSeason(now,h)
+  changeSeason(now,h);
 }
 
 function clockDisplay() {
@@ -71,10 +79,7 @@ const fall = [9,10,11];
 function changeSeason(now,h) {
   let season = 'what season is this';
   let month = now.getMonth();
-  if (winter.includes(month) && h > 5) {
-    season = 'winter-day';
-  }
-  else if (spring.includes(month) && h > 17) {
+  if (spring.includes(month) && h > 17) {
     season = 'spring-night';
   }
   else if (spring.includes(month) && h > 5) {
@@ -94,10 +99,10 @@ function changeSeason(now,h) {
   }
   else if (winter.includes(month) && h > 17) {
     season = 'winter-night';
-  } else {
+  }
+  else {
     season = 'winter-day';
   }
-  console.log(season);
   styleSeason(season);
 }
 
@@ -136,25 +141,35 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--fall-night)";
     clockBG.style.backgroundColor = "var(--fall-night)";
     hourlyTable.style.backgroundColor = "var(--fall-night)";
-    
   }
   else if (season == 'winter-day') {
     body.style.backgroundColor = "var(--winter-day)";
     clockBG.style.backgroundColor = "var(--winter-day)";
     hourlyTable.style.backgroundColor = "var(--winter-day)";
-    mnt1.style.fill = "rgb(61,121,169)";
-    mnt2.style.fill = "rgb(135,178,212)";
-    mnt3.style.fill = "rgb(103,157,200)";
+    mnt1.style.opacity = "0";
+    mnt2.style.opacity = "0";
+    mnt3.style.opacity = "0";
+    mntw1.style.opacity = "1";
+    mntw2.style.opacity = "1";
+    mntw3.style.opacity = "1";
     sf1.style.opacity = "1";
     sf2.style.opacity = "1";
+    sb1.style.opacity = "1";
+    sb2.style.opacity = "1";
+    sb3.style.opacity = "1";
+    sb4.style.opacity = "1";
+    sb5.style.opacity = "1";
   }
   else {
     body.style.backgroundColor = "var(--winter-night)";
     clockBG.style.backgroundColor = "var(--winter-night)";
     hourlyTable.style.backgroundColor = "var(--winter-night)";
-    mnt1.style.fill = "rgb(61,121,169)";
-    mnt2.style.fill = "rgb(135,178,212)";
-    mnt3.style.fill = "rgb(103,157,200)";
+    mnt1.style.opacity = "0";
+    mnt2.style.opacity = "0";
+    mnt3.style.opacity = "0";
+    mntw1.style.opacity = "1";
+    mntw2.style.opacity = "1";
+    mntw3.style.opacity = "1";
     sf1.style.opacity = "1";
     sf2.style.opacity = "1";
   }
