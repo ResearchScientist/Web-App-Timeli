@@ -270,6 +270,41 @@ input::placeholder {
   opacity: 0;
 }
 
+#snowball-1 {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  opacity: 1;
+}
+
+#snowball-2 {
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  opacity: 1;
+}
+
+#snowball-3 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  opacity: 1;
+}
+
+#snowball-4 {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+  opacity: 1;
+}
+
+#snowball-5 {
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  opacity: 1;
+}
+
 #snowflake-1 {
   position: absolute;
   top: 5%;
