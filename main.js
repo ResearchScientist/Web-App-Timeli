@@ -14,6 +14,9 @@ const mnt3 = document.querySelector('#mtn-3');
 const mntw1 = document.querySelector('#mtn-w-1');
 const mntw2 = document.querySelector('#mtn-w-2');
 const mntw3 = document.querySelector('#mtn-w-3');
+const stargazer = document.querySelector('#stargazer');
+const sunflower = document.querySelector('#sunflower');
+const clover = document.querySelector('#clover');
 const lf1 = document.querySelector('#leaf-1');
 const lf2 = document.querySelector('#leaf-2');
 const lf3 = document.querySelector('#leaf-3');
@@ -111,11 +114,17 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--spring-day)";
     clockBG.style.backgroundColor = "var(--spring-day)";
     hourlyTable.style.backgroundColor = "var(--spring-day)";
+    stargazer.style.opacity = "1";
+    sunflower.style.opacity = "1";
+    clover.style.opacity = "1";
   }
   else if (season == 'spring-night') {
     body.style.backgroundColor = "var(--spring-night)";
     clockBG.style.backgroundColor = "var(--spring-night)";
     hourlyTable.style.backgroundColor = "var(--spring-night)";
+    stargazer.style.opacity = "1";
+    sunflower.style.opacity = "1";
+    clover.style.opacity = "1";
   }
   else if (season == 'summer-day') {
     body.style.backgroundColor = "var(--summer-day)";
