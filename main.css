@@ -5,11 +5,17 @@
   --summer-day: rgb(103,157,200);
   --summer-night: rgb(68,129,187);
   --fall-day: rgb(200,100,0);
-  --fall-night: rgb(153,76,0);
+  --fall-night: rgb(143,71,0);
   --winter-day: rgb(160,195,223);
   --winter-night: rgb(51,108,153);
   --season: var(--fall);
   --bgColour: var(--season);
+  --mnt-1-spring: rgb(68,136,68);
+  --mnt-2-spring: rgb(119,187,119);
+  --mnt-3-spring: rgb(76,153,76);
+  --mnt-1-fall: rgb(153,76,0);
+  --mnt-2-fall: rgb(191,96,0);
+  --mnt-3-fall: rgb(217,108,0);
 }
 
 * {
@@ -231,6 +237,20 @@ input::placeholder {
   background-color: rgba(250,250,250,.25);
 }
 
+#mnt-range {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  opacity: 0;
+}
+
+#mnt-range-w {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  opacity: 0;
+}
+
 #stargazer {
   position: absolute;
   bottom: 0%;
@@ -340,7 +360,7 @@ input::placeholder {
   opacity: 0;
 }
 
-#mtn-1 {
+/* #mtn-1 {
   position: absolute;
   bottom: 10%;
   left: 0%;
@@ -378,4 +398,4 @@ input::placeholder {
   bottom: 0%;
   left: 1.6%;
   opacity: 0;
-}
+} */

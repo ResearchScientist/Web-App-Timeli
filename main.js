@@ -8,12 +8,14 @@ const hourlyTable = document.querySelector('#hourly-table');
 const tableFormSection = document.querySelector('#hourly-table-form-section');
 const body = document.querySelector('body');
 const clockBG = document.querySelector('#clock-display');
-const mnt1 = document.querySelector('#mtn-1');
-const mnt2 = document.querySelector('#mtn-2');
-const mnt3 = document.querySelector('#mtn-3');
-const mntw1 = document.querySelector('#mtn-w-1');
-const mntw2 = document.querySelector('#mtn-w-2');
-const mntw3 = document.querySelector('#mtn-w-3');
+const mntRange = document.querySelector('#mnt-range');
+const mntRangeW = document.querySelector('#mnt-range-w');
+const mnt1 = document.querySelector('#mnt-1');
+const mnt2 = document.querySelector('#mnt-2');
+const mnt3 = document.querySelector('#mnt-3');
+const mntw1 = document.querySelector('#mnt-w-1');
+const mntw2 = document.querySelector('#mnt-w-2');
+const mntw3 = document.querySelector('#mnt-w-3');
 const stargazer = document.querySelector('#stargazer');
 const sunflower = document.querySelector('#sunflower');
 const clover = document.querySelector('#clover');
@@ -114,6 +116,10 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--spring-day)";
     clockBG.style.backgroundColor = "var(--spring-day)";
     hourlyTable.style.backgroundColor = "var(--spring-day)";
+    mntRange.style.opacity = "1";
+    mnt1.style.fill = "var(--mnt-1-spring)";
+    mnt2.style.fill = "var(--mnt-2-spring)";
+    mnt3.style.fill = "var(--mnt-3-spring)";
     stargazer.style.opacity = "1";
     sunflower.style.opacity = "1";
     clover.style.opacity = "1";
@@ -122,6 +128,10 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--spring-night)";
     clockBG.style.backgroundColor = "var(--spring-night)";
     hourlyTable.style.backgroundColor = "var(--spring-night)";
+    mntRange.style.opacity = "1";
+    mnt1.style.fill = "var(--mnt-1-spring)";
+    mnt2.style.fill = "var(--mnt-2-spring)";
+    mnt3.style.fill = "var(--mnt-3-spring)";
     stargazer.style.opacity = "1";
     sunflower.style.opacity = "1";
     clover.style.opacity = "1";
@@ -140,6 +150,10 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--fall-day)";
     clockBG.style.backgroundColor = "var(--fall-day)";
     hourlyTable.style.backgroundColor = "var(--fall-day)";
+    mntRange.style.opacity = "1";
+    mnt1.style.fill = "var(--mnt-1-fall)";
+    mnt2.style.fill = "var(--mnt-2-fall)";
+    mnt3.style.fill = "var(--mnt-3-fall)";
     lf1.style.opacity = "1";
     lf2.style.opacity = "1";
     lf3.style.opacity = "1";
@@ -150,17 +164,22 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--fall-night)";
     clockBG.style.backgroundColor = "var(--fall-night)";
     hourlyTable.style.backgroundColor = "var(--fall-night)";
+    mntRange.style.opacity = "1";
+    mnt1.style.fill = "var(--mnt-1-fall)";
+    mnt2.style.fill = "var(--mnt-2-fall)";
+    mnt3.style.fill = "var(--mnt-3-fall)";
+    lf1.style.opacity = "1";
+    lf2.style.opacity = "1";
+    lf3.style.opacity = "1";
+    lf4.style.opacity = "1";
+    lf5.style.opacity = "1";
   }
   else if (season == 'winter-day') {
     body.style.backgroundColor = "var(--winter-day)";
     clockBG.style.backgroundColor = "var(--winter-day)";
     hourlyTable.style.backgroundColor = "var(--winter-day)";
-    mnt1.style.opacity = "0";
-    mnt2.style.opacity = "0";
-    mnt3.style.opacity = "0";
-    mntw1.style.opacity = "1";
-    mntw2.style.opacity = "1";
-    mntw3.style.opacity = "1";
+    mntRange.style.opacity = "0";
+    mntRangeW.style.opacity = "1";
     sf1.style.opacity = "1";
     sf2.style.opacity = "1";
     sb1.style.opacity = "1";
@@ -173,14 +192,14 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--winter-night)";
     clockBG.style.backgroundColor = "var(--winter-night)";
     hourlyTable.style.backgroundColor = "var(--winter-night)";
-    mnt1.style.opacity = "0";
-    mnt2.style.opacity = "0";
-    mnt3.style.opacity = "0";
-    mntw1.style.opacity = "1";
-    mntw2.style.opacity = "1";
-    mntw3.style.opacity = "1";
+    mntRangeW.style.opacity = "1";
     sf1.style.opacity = "1";
     sf2.style.opacity = "1";
+    sb1.style.opacity = "1";
+    sb2.style.opacity = "1";
+    sb3.style.opacity = "1";
+    sb4.style.opacity = "1";
+    sb5.style.opacity = "1";
   }
 }
 
