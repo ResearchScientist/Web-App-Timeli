@@ -2,6 +2,8 @@
 
 A minimalist to do app.
 
+Live site : https://researchscientist.github.io/Web-App-Timeli/
+
 **Features**
 
 - displays the current hour and minute(s)
