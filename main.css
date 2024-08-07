@@ -251,6 +251,8 @@ input::placeholder {
   opacity: 0;
 }
 
+/* spring */
+
 #stargazer {
   position: absolute;
   bottom: 0%;
@@ -275,6 +277,32 @@ input::placeholder {
 #df1,#df2,#df3,#df4,#df5 {
   display: none;
 }
+
+/* summer */
+
+#beach {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  overflow: hidden;
+}
+
+#sand {
+  width: 120%;
+  height: 80px;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: flex-end;
+  border-radius: 50% 50% 0 0;
+  background-color: #E4C9A0;
+}
+
+/* fall */
 
 #leaf-1 {
   position: absolute;
@@ -310,6 +338,8 @@ input::placeholder {
   right: 5%;
   opacity: 0;
 }
+
+/* winter */
 
 #snowball-1 {
   position: absolute;

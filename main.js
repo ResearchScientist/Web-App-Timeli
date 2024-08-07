@@ -244,23 +244,23 @@ function displayActions(h) {
 
 // PERSIST DATA 
 
-function saveLocStoArray () {
-  let jsonHourlyItems = JSON.stringify(hourlyItems);
-  localStorage.setItem('array',jsonHourlyItems);
-}
+// function saveLocStoArray () {
+//   let jsonHourlyItems = JSON.stringify(hourlyItems);
+//   localStorage.setItem('array',jsonHourlyItems);
+// }
 
-function retrieveLocStoArray () {
-  let retrievedString = localStorage.getItem('array');
-  let retrievedArray = JSON.parse(retrievedString);
-  hourlyItems = retrievedArray;
-  repopulateInputs(retrievedArray);
-}
+// function retrieveLocStoArray () {
+//   let retrievedString = localStorage.getItem('array');
+//   let retrievedArray = JSON.parse(retrievedString);
+//   hourlyItems = retrievedArray;
+//   repopulateInputs(retrievedArray);
+// }
 
-function repopulateInputs(retrievedArray) {
-  for (let i = 0; i < 24; i++) {
-    let repopulateElement = document.querySelector(`#dt${i}`);
-    repopulateElement.value = retrievedArray[i];
-  }
-}
+// function repopulateInputs(retrievedArray) {
+//   for (let i = 0; i < 24; i++) {
+//     let repopulateElement = document.querySelector(`#dt${i}`);
+//     repopulateElement.value = retrievedArray[i];
+//   }
+// }
 
-retrieveLocStoArray();
+// retrieveLocStoArray();
