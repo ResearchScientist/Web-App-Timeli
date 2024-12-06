@@ -19,6 +19,7 @@ const mntw3 = document.querySelector('#mnt-w-3');
 const stargazer = document.querySelector('#stargazer');
 const sunflower = document.querySelector('#sunflower');
 const clover = document.querySelector('#clover');
+const beach = document.querySelector('#beach');
 const lf1 = document.querySelector('#leaf-1');
 const lf2 = document.querySelector('#leaf-2');
 const lf3 = document.querySelector('#leaf-3');
@@ -142,11 +143,13 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--summer-day)";
     clockBG.style.backgroundColor = "var(--summer-day)";
     hourlyTable.style.backgroundColor = "var(--summer-day)";
+    beach.style.opacity = "1";
   }
   else if (season == 'summer-night') {
     body.style.backgroundColor = "var(--summer-night)";
     clockBG.style.backgroundColor = "var(--summer-night)";
     hourlyTable.style.backgroundColor = "var(--summer-night)";
+    beach.style.opacity = "1";
   }
   else if (season == 'fall-day') {
     body.style.backgroundColor = "var(--fall-day)";
@@ -180,7 +183,6 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--winter-day)";
     clockBG.style.backgroundColor = "var(--winter-day)";
     hourlyTable.style.backgroundColor = "var(--winter-day)";
-    mntRange.style.opacity = "0";
     mntRangeW.style.opacity = "1";
     sf1.style.opacity = "1";
     sf2.style.opacity = "1";
