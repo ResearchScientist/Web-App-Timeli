@@ -76,10 +76,10 @@ setInterval(clock,1000);
 
 // * SEASONS * //
 
-const winter = [0,1,2];
-const spring = [3,4,5];
-const summer = [6,7,8];
-const fall = [9,10,11];
+const winter = [11,0,1];
+const spring = [2,3,4];
+const summer = [5,6,7];
+const fall = [8,9,10];
 
 function changeSeason(now,h) {
   let season = 'what season is this';
@@ -108,10 +108,12 @@ function changeSeason(now,h) {
   else {
     season = 'winter-day';
   }
+  console.log(month);
   styleSeason(season);
 }
 
 function styleSeason(season) {
+  console.log(season);
   if (season == 'spring-day') {
     body.style.backgroundColor = "var(--spring-day)";
     clockBG.style.backgroundColor = "var(--spring-day)";
