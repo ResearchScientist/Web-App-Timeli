@@ -199,9 +199,9 @@ input::placeholder {
   transition: transform 1s ease-in-out;
 }
 
-#hourly-table-form {
-  margin: 10px 0 0;
-}
+/* #hourly-table-form-section form input {
+  background-color: var(--spring-day);
+} */
 
 .table-item-section {
   width: 95%;

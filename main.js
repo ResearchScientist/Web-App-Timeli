@@ -6,6 +6,7 @@ const hourlyButtonOpen = document.querySelector('#button-hourly-table-open');
 const hourlyButtonClose = document.querySelector('#button-hourly-table-close');
 const hourlyTable = document.querySelector('#hourly-table');
 const tableFormSection = document.querySelector('#hourly-table-form-section');
+const hourlyTableFormInputs = document.querySelector('#hourly-table-form-section form input')
 const body = document.querySelector('body');
 const clockBG = document.querySelector('#clock-display');
 const mntRange = document.querySelector('#mnt-range');
@@ -119,6 +120,7 @@ function styleSeason(season) {
     body.style.backgroundColor = "var(--spring-day)";
     clockBG.style.backgroundColor = "var(--spring-day)";
     hourlyTable.style.backgroundColor = "var(--spring-day)";
+    // hourlyTableFormInputs.style.backgroundColor = "rgb(250,250,250)";
     mntRange.style.opacity = "1";
     mnt1.style.fill = "var(--mnt-1-spring)";
     mnt2.style.fill = "var(--mnt-2-spring)";
