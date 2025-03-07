@@ -21,3 +21,7 @@ This allowed for a targetable div that JS could use to rotate as a minute hand. 
 In keeping with a minimalist style, I kept animations to a minimum. But I still wanted some aesthetic variation. Since the dial represents the sun and moon as they orbit around the planet it felt appropriate to incorporate the change of seasons as the planet orbits the sun.
 
 I chose a matte colour palette for each season to give a soothing and warm feel. I also used basic shapes to make flat illustrations. By keeping stimuli to a minimum and avoiding the use of vibrant colours the user's cognitive load would be kept low and result in a more calming interaction with the interface.
+
+# Development Structure
+
+Since I'm designing a minimalist aesthetic for the user interface I went ahead and implemented a minimalist file structure for the development as well. Tranquility for all.
